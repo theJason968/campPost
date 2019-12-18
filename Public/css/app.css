@@ -5,6 +5,11 @@ body, html {
 
 .show{display: block;}
 
+#welcome{
+    font-size: 5rem;
+    color: black;
+}
+
 .jumbotron{
     align-content: center;
     width: 100%;
@@ -46,11 +51,6 @@ a{
     .container a{
         font-size: 0.5rem;
     }
-}
-
-#welcome{
-    font-size: 5rem;
-    color: black;
 }
 
 .thumbnail {
