@@ -18,6 +18,8 @@ var commentRoutes       = require("./routes/comments"),
     campgroundRoutes    = require("./routes/campground"),
     indexRoutes         = require("./routes/index")
 
+const PORT = process.env.PORT || 3000
+
 // mongoose.connect("mongodb://localhost/yelp_campv11", {useNewUrlParser: true });
 mongoose.connect("mongodb+srv://thejason968:2FhBk7Io0RX7D1D1@cluster0-tmsua.mongodb.net/test?retryWrites=true&w=majority", {useNewUrlParser: true });
 app.use(bodyParser.urlencoded({extended: true}));
