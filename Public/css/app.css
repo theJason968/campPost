@@ -14,10 +14,6 @@ body, html {
     padding: 100px;
 }
 
-#welcome{
-    font-size: 5rem;
-}
-
 .jumbotron h3{
     margin-bottom: 50px;
     font-size: 2rem;
@@ -50,6 +46,11 @@ a{
     .container a{
         font-size: 0.5rem;
     }
+}
+
+#welcome{
+    font-size: 5rem;
+    color: black;
 }
 
 .thumbnail {
