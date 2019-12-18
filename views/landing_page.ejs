@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="/css/landingpage.css">
+    <link rel="stylesheet" href="/css/new.css">
+    <link rel="stylesheet" href="/css/show.css">
+    <script src="https://kit.fontawesome.com/a76040e4b3.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
+    <title>YelpCamp</title>
+</head>
+<body>    
+    <div id="popUp">
+        <% if(error && error.length > 0) { %>
+        <div class="flash">
+            <p class="error"><%= error %></p>
+        </div>
+        <% } %>  
+        <% if(success && success.length > 0) { %>
+        <div class="flash">
+            <p class="success"><%= success %></p>
+        </div> 
+        <% } %>  
+    </div>
+    
+<div id="landingPage">
+    <div id = "landingHeader">
+        <h1 id="welcome">Welcome to YelpCamp</h1>
+        <a id="viewCamp" href="/campgrounds">View Campgrounds</a>
+    </div>
+    <ul class="slideshow">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+    </ul> 
+</div>
+
+

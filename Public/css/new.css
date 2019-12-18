@@ -1,0 +1,46 @@
+#formContainer{
+    margin: 0 auto;
+    width: 70%;
+    text-align: center;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding-top: 30px;
+}
+
+#input{
+    display: flex;
+    flex-direction: column;
+    width:30%;
+    margin: 0 auto;
+}
+
+input{
+    border-radius: 5px;
+    border: rgba(216, 201, 201, 0.788) solid 1px;
+    padding: 10px;
+}
+
+#submit{
+    background: blueviolet;
+    border: rgba(216, 201, 201, 0.788) solid 1px;
+    padding: 10px;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+.form a{
+    width: 40px;
+    margin-top: 10px;
+}
+
+.caption {
+    font-weight: bold;
+}
+
+

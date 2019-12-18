@@ -1,0 +1,57 @@
+<%- include("../partials/header") %>
+<div id = "showContainer">
+    <div class="sidebar">
+        <p>Yelp Camp</p>
+        <div id="showList">
+            <li>list 1</li>
+            <li>list 2</li>
+            <li>list 3</li>
+        </div>
+    </div>
+    
+    <div class="showImage">
+        <img src="<%= campground.image %>" alt="">
+        <div>
+            <h4>
+                $<%= campground.price %>/night
+            </h4>
+        </div>
+        <h1><%= campground.name %></h1>
+        <p><%= campground.description %></p>
+        <p>
+            <em>Submitted by: <%= campground.author.username %></em>
+        </p>
+        <% if(currentUser && campground.author.id.equals(currentUser._id)) {%>
+        <div > 
+            <a class="editButton" href="/campgrounds/<%= campground._id %>/edit">Edit</a>
+            <form id="deleteForm" action="/campgrounds/<%= campground._id %>?_method=DELETE" method="POST">
+                <button class="Delete">Delete</button>
+            </form>
+        </div>
+        <% } %>
+    </div>
+    <div class="commentSection">
+        <a id="addComment" href="/campgrounds/<%= campground._id %>/comments/new">Add comment</a>
+        <hr>
+        <% campground.comment.forEach(function(comment){ %>
+            <div class="author">
+                <span><%= comment.created.toDateString() %></span>
+                <strong><%= comment.author.username %></strong>
+                <p><%= comment.text %></p>
+                <div id="edit">
+                    <% if(currentUser && comment.author.id.equals(currentUser._id)) {%>
+                    <a class="editButton" href="/campgrounds/<%= campground._id %>/comments/<%= comment._id %>/edit">Edit</a>
+                    <form id="deleteForm" action="/campgrounds/<%= campground._id %>/comments/<%= comment._id %>?_method=DELETE" method="POST">
+                        <button class="Delete">Delete</button>
+                    </form>
+                    <% } %>
+                </div>
+                <hr>
+            </div>
+                
+        <% }) %>
+    </div>
+
+</div>
+    
+<%- include("../partials/footer") %>

@@ -1,0 +1,18 @@
+<%- include("../partials/header") %>
+<div id="formContainer">
+    <h1>Create new campground</h1>
+    
+
+    <form class="form" action="/campgrounds" method="POST">
+        <div id="input">
+        <input required type="text" placeholder="Enter new campground" name="name">
+        <input required type="number" placeholder="Enter price" name="price" min="0.01" step="0.01">
+        <input required style="margin-top: 10px;" type="text" placeholder="image url" name="image">
+        <input style="margin-top: 10px;" type="text" name="description" placeholder="description">
+        <button id = "submit">Submit</button>
+        <a href="/campgrounds">Back</a>
+        </div>  
+    </form>
+</div>
+
+<%- include("../partials/footer") %>
