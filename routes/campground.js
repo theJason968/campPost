@@ -99,7 +99,7 @@ router.put("/:id", middleware.checkCampgroundOwnership, function(req, res){
         campgroundModel.findByIdAndUpdate(req.params.id, req.body.campground, function(err, updatedCampground){
             if(err){
                 req.flash("error", err.message);
-                console.log("error");
+                console.log(err.message);
                 res.redirect("back");
             } else {
                 req.flash("success", "Succesfully Updated");
