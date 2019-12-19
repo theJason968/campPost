@@ -39,6 +39,7 @@ router.post("/", middleware.isLoggedIn, function(req, res){
     geocoder.geocode(req.body.location, function (err, data) {
       if (err || !data.length) {
         req.flash('error', 'Invalid address');
+        console.log(err.message)
         return res.redirect('back');
       }
       var lat = data[0].latitude;
@@ -48,7 +49,7 @@ router.post("/", middleware.isLoggedIn, function(req, res){
       // Create a new campground and save to DB
       campgroundModel.create(newCampground, function(err, newlyCreated){
           if(err){
-              console.log(err);
+              console.log(err.message);
           } else {
               //redirect back to campgrounds page
               console.log(newlyCreated);
