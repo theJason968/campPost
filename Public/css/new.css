@@ -43,4 +43,9 @@ input{
     font-weight: bold;
 }
 
+label {
+    text-align: left;
+    padding: 10px;
+}
+
 

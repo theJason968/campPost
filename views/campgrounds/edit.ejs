@@ -5,10 +5,16 @@
         
         <form class="form" action="/campgrounds/<%= campground._id %>?_method=PUT" method="POST">
             <div id="input">
+            <label for="campground">Campground:</label>
             <input required type="text" name="campground[name]" value="<%= campground.name %>">
-            <input style="margin-top: 10px;" required type="number" name="campground[price]" value="<%= campground.price %>" min="0.01" step="0.01">
-            <input required style="margin-top: 10px;" type="text"  name="campground[image]" value="<%= campground.image %>">
-            <input style="margin-top: 10px;" type="text" name="campground[description]" value="<%= campground.description %>">
+            <label for="price">Price per night:</label>
+            <input required type="number" name="campground[price]" value="<%= campground.price %>" min="0.01" step="0.01">
+            <label for="image">Image Url:</label>
+            <input required type="text"  name="campground[image]" value="<%= campground.image %>">
+            <label for="location">Location:</label>
+            <input class="form-control" type="text" name="location" id="location" value="<%= campground.location %>">
+            <label for="description">Description:</label>
+            <input type="text" name="campground[description]" value="<%= campground.description %>">
             <button id = "submit">Submit</button>
             <a href="/campgrounds">Back</a>
             </div>  

@@ -5,10 +5,16 @@
 
     <form class="form" action="/campgrounds" method="POST">
         <div id="input">
+        <label for="campground">Campground:</label>
         <input required type="text" placeholder="Enter new campground" name="name">
+        <label for="price">Price per night:</label>
         <input required type="number" placeholder="Enter price" name="price" min="0.01" step="0.01">
-        <input required style="margin-top: 10px;" type="text" placeholder="image url" name="image">
-        <input style="margin-top: 10px;" type="text" name="description" placeholder="description">
+        <label for="image">Image Url:</label>
+        <input required type="text" placeholder="image url" name="image">
+        <label for="location">Location</label>
+        <input required class="form-control" type="text" name="location" id="location" placeholder="Yosemite National Park, CA">
+        <label for="description">Description:</label>
+        <input type="text" name="description" placeholder="description">
         <button id = "submit">Submit</button>
         <a href="/campgrounds">Back</a>
         </div>  
