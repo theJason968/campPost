@@ -36,6 +36,7 @@ router.post("/", middleware.isLoggedIn, function(req, res){
         id: req.user._id,
         username: req.user.username
     }
+    let price = req.body.price;
     geocoder.geocode(req.body.location, function (err, data) {
       if (err || data.status === 'ZERO_RESULTS') {
         req.flash('error', 'Invalid address');
@@ -45,7 +46,7 @@ router.post("/", middleware.isLoggedIn, function(req, res){
       var lat = data[0].latitude;
       var lng = data[0].longitude;
       var location = data[0].formattedAddress;
-      var newCampground = {name: name, image: image, description: desc, author:author, location: location, lat: lat, lng: lng};
+      var newCampground = {name: name, image: image, description: desc, author:author, location: location, lat: lat, lng: lng, price: price};
       // Create a new campground and save to DB
       campgroundModel.create(newCampground, function(err, newlyCreated){
           if(err){
