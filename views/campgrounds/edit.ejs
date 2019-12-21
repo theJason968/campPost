@@ -10,7 +10,7 @@
             <label for="price">Price per night:</label>
             <input required type="number" name="campground[price]" value="<%= campground.price %>" min="0.01" step="0.01">
             <label for="image">Image Url:</label>
-            <input required type="text"  name="campground[image]" value="<%= campground.image %>">
+            <input type="text"  name="campground[image]" value="<%= campground.image %>">
             <label for="location">Location:</label>
             <input class="form-control" type="text" name="location" id="location" value="<%= campground.location %>">
             <label for="description">Description:</label>
